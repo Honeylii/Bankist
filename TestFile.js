@@ -274,7 +274,7 @@ const entryDate = function (date, locale) {
     day: 'numeric',
     month: 'long',
     year: 'numeric',
-    weekday: 'short',
+    weekday: 'long', // short
   };
 
   // console.log(now);

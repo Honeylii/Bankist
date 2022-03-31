@@ -1,0 +1,310 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap");
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: inherit;
+}
+
+ body{
+    line-height: 1.6;
+    font-family: 'Poppins', sans-serif;
+    color: #444;
+    background-color: #f3f3f3;
+    height: 100vh;
+    padding: 2rem;
+}
+
+p{
+    line-height: 1.2;
+    font-size: 16px;
+}
+
+header{
+    color: #333;
+    height: 70px;
+}
+
+
+header .logo{
+    font-size: 25px;
+    font-weight: 500;
+}
+
+header {
+    justify-content: space-between;
+}
+
+.container{
+    max-width: 1500px;
+    padding:0 20px;
+    margin: 0 auto;
+}
+
+header{
+    display: flex;
+    justify-content:space-between;
+    align-self: center;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+header img{
+    width: 60px;
+}
+
+
+
+
+/* Utilities */
+h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.login__input{
+    max-width: 110px;
+    padding: 0.7rem 2rem;
+    font-size: 1.6rem;
+    font-family: inherit;
+    text-align: center;  
+    border-radius: 10rem;
+    margin-right: 1rem;
+    color: inherit;
+    border: 1px solid #fff;
+    transition: all 0.3s;
+}
+
+
+form input {
+    outline: none;
+}
+
+form{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+button{
+    border: none;
+    cursor: pointer;
+    /* background: inherit; */
+}
+
+.form__input {
+    width: 100%;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.4);
+    font-family: inherit;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #333;
+    padding: 0.3rem 1rem;
+    border-radius: 0.7rem;
+    transition: all 0.3s;
+  }
+
+  /* input{
+    padding: 0.7rem 2rem;
+  } */
+
+/*         */
+/*     */
+/* Movement */
+
+.app{
+    position: relative;
+    max-width: 100rem;
+    margin: 4rem auto;
+    display: grid;
+    grid-template-columns: 4fr 3fr;
+    grid-template-rows: auto repeat(3, 15rem) auto;
+    gap: 2rem;
+    width: 100%;
+
+    /* NOTE This creates the fade in/out anumation */
+    opacity: 0;
+    transition: all 1s;
+}
+
+.balance{
+    grid-column: 1/ span 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding:0 2rem; */
+    width: 100%;
+    margin: 2rem 0;
+}
+.balance__label{
+    font-weight: 500;
+    font-size: 2rem;
+}
+.balance__date{
+    font-size: 1.2rem;
+    color: #888;
+}
+.balance__value{
+    font-size: 4rem;
+    font-weight: 500;
+}
+
+
+/* Movement */
+.movements{
+    grid-row: 2 / span 3;
+    border-radius: 1rem;
+    background-color: #fff;
+    overflow: scroll;
+}
+
+.movements__row{
+    padding: 2rem 4rem;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+}
+.movements__type {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #fff;
+    padding: 0.1rem 1rem;
+    border-radius: 10rem;
+    margin-right: 2rem;
+}
+
+.movements__value {
+    font-size: 1.7rem;
+    margin-left: auto;
+}
+
+
+.movements__type--deposit {
+    background-image: linear-gradient(to top left, #39b385, #9be15d);
+}
+  
+.movements__type--withdrawal {
+background-image: linear-gradient(to top left, #e52a5a, #ff585f);
+}
+
+
+
+
+
+
+/* SUMMARY */
+.summary {
+    grid-row: 5 / 6;
+    display: flex;
+    align-items: baseline;
+    padding: 0 0.5rem;
+    margin: 2rem 0;
+}
+
+
+.summary__value{
+    font-size: 2.2rem;
+    margin-right: 2.5rem;
+}
+.summary__label{
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-right: 1rem;
+}
+
+.summary__value--in,
+.summary__value--interest{
+    color: #66c873;;
+}
+.summary__value--out{
+    color: #f5465d;
+}
+
+.btn--sort{
+    margin-left: auto;
+}
+  /* OPERATIONS */
+.operation {
+    border-radius: 1rem;
+    padding: 3rem 4rem;
+    color: #333;
+  }
+  
+  .operation--transfer {
+    background-image: linear-gradient(to top left, #ffb003, #ffcb03);
+  }
+  
+  .operation--loan {
+    background-image: linear-gradient(to top left, #39b385, #9be15d);
+  }
+  
+  .operation--close {
+    background-image: linear-gradient(to top left, #e52a5a, #ff585f);
+  }
+
+
+ 
+.form {
+    display: grid;
+    grid-template-columns: 2.5fr 2.5fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 0.4rem 1rem;
+    text-align: center;
+}
+
+/* .operation form{
+    display: grid;
+    grid-template-columns: 40% 40% 20%;
+    gap: 1rem;
+    text-align: center;
+} */
+
+.form.form--loan {
+    grid-template-columns: 2.5fr 1fr 2.5fr;
+}
+
+.form__label{
+    font-size: 1.3rem;
+}
+.operation button{
+    background-color:#f5f5f5 ;
+    border-radius: 10px;
+}
+
+/* LOGOUT */
+  p.logout-timer {
+    margin-top: 2.2rem;
+    text-align: center;
+}
+
+.logout-timer .timer{
+    font-weight: 700;
+    margin-right: auto;
+}
+
+
+  @media (max-width: 780px){
+      .container{
+           max-width: 100%;
+      }
+      header {
+          padding: 0;
+          justify-content: space-between;
+      }
+      .hidden{
+          display: none;
+      }
+      .app{
+          grid-template-columns:1fr 1fr;
+      }
+  }
